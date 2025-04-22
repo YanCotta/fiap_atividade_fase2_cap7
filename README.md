@@ -29,29 +29,35 @@
 Este projeto realiza uma análise estatística de dados do agronegócio brasileiro, focada na produção de soja em 30 estados e regiões do Brasil. A análise inclui a criação de uma base de dados com 30 linhas e 4 colunas, análise exploratória de uma variável quantitativa (Produção em toneladas) e análise gráfica de uma variável qualitativa (Classificação de Produtividade). O projeto foi desenvolvido em R e utiliza dados fictícios, mas realistas, baseados em fontes públicas como CONAB, IBGE, MAPA, Embrapa, INPE e CNA.
 
 ## Estrutura dos Arquivos
+### Estrutura do Projeto
 
-- **data**:
-        - **agro_data.csv**: Base de dados em formato CSV, contendo 30 linhas e 4 colunas:
-                  - `Estado`: Nome do estado ou região (variável qualitativa nominal).
-                  - `Area Plantada (ha)`: Área cultivada em hectares (variável quantitativa contínua).
-                  - `Producao (toneladas)`: Quantidade produzida em toneladas (variável quantitativa discreta).
-                  - `Classificacao de Produtividade`: Categorização em "Baixa", "Média" ou "Alta" (variável qualitativa ordinal).
-        - **agro_data.xlsx**: Versão em Excel da mesma base de dados, para visualização ou edição manual.
+#### 📁 data
+- **agro_data.csv**
+  - Base de dados em formato CSV (30 linhas × 4 colunas)
+  - Colunas:
+    - `Estado`: Nome do estado/região (qualitativa nominal)
+    - `Area Plantada (ha)`: Área cultivada em hectares (quantitativa contínua)
+    - `Producao (toneladas)`: Quantidade produzida (quantitativa discreta)
+    - `Classificacao de Produtividade`: Categorias "Baixa", "Média", "Alta" (qualitativa ordinal)
+- **agro_data.xlsx**
+  - Versão Excel da base de dados
+  - Para visualização ou edição manual
 
-- **src**: 
-      - **analise_agro.R**: Script em R que realiza:
-          - Carregamento dos dados do `agro_data.csv`.
-          - Análise exploratória da variável `Producao (toneladas)`, incluindo:
-              - Medidas de tendência central (média, mediana, moda).
-              - Medidas de dispersão (variância, desvio padrão, amplitude).
-              - Medidas separatrizes (quartis e decis).
-              - Gráficos: histograma e boxplot.
-          - Análise gráfica da variável `Classificacao de Produtividade`, com um gráfico de barras.
+#### 📁 src
+- **analise_agro.R**
+  - Script principal com:
+    - Carregamento de dados
+    - Análise exploratória de `Producao (toneladas)`
+      - Medidas de tendência central
+      - Medidas de dispersão
+      - Medidas separatrizes
+      - Análises gráficas
+    - Análise gráfica de `Classificacao de Produtividade`
 
-- **docs**: 
-    - **histograma_producao.png**: Histograma da produção de soja.
-    - **boxplot_producao.png**: Boxplot da produção de soja.
-    - **grafico_classificacao.png**: Gráfico de barras da classificação de produtividade.
+#### 📁 docs
+- **histograma_producao.png**: Distribuição da produção
+- **boxplot_producao.png**: Dispersão e outliers
+- **grafico_classificacao.png**: Frequência das classificações
 
 ## Pré-requisitos
 
