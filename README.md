@@ -30,23 +30,28 @@ Este projeto realiza uma análise estatística de dados do agronegócio brasilei
 
 ## Estrutura dos Arquivos
 
-- **agro_data.csv**: Base de dados em formato CSV, contendo 30 linhas e 4 colunas:
-  - `Estado`: Nome do estado ou região (variável qualitativa nominal).
-  - `Area Plantada (ha)`: Área cultivada em hectares (variável quantitativa contínua).
-  - `Producao (toneladas)`: Quantidade produzida em toneladas (variável quantitativa discreta).
-  - `Classificacao de Produtividade`: Categorização em "Baixa", "Média" ou "Alta" (variável qualitativa ordinal).
-- **agro_data.xlsx**: Versão em Excel da mesma base de dados, para visualização ou edição manual.
-- **analise_agro.R**: Script em R que realiza:
-  - Carregamento dos dados do `agro_data.csv`.
-  - Análise exploratória da variável `Producao (toneladas)`, incluindo:
-    - Medidas de tendência central (média, mediana, moda).
-    - Medidas de dispersão (variância, desvio padrão, amplitude).
-    - Medidas separatrizes (quartis e decis).
-    - Gráficos: histograma e boxplot.
-  - Análise gráfica da variável `Classificacao de Produtividade`, com um gráfico de barras.
-- **histograma_producao.png**: Histograma da produção de soja.
-- **boxplot_producao.png**: Boxplot da produção de soja.
-- **grafico_classificacao.png**: Gráfico de barras da classificação de produtividade.
+- **data**:
+        - **agro_data.csv**: Base de dados em formato CSV, contendo 30 linhas e 4 colunas:
+                  - `Estado`: Nome do estado ou região (variável qualitativa nominal).
+                  - `Area Plantada (ha)`: Área cultivada em hectares (variável quantitativa contínua).
+                  - `Producao (toneladas)`: Quantidade produzida em toneladas (variável quantitativa discreta).
+                  - `Classificacao de Produtividade`: Categorização em "Baixa", "Média" ou "Alta" (variável qualitativa ordinal).
+        - **agro_data.xlsx**: Versão em Excel da mesma base de dados, para visualização ou edição manual.
+
+- **src**: 
+      - **analise_agro.R**: Script em R que realiza:
+          - Carregamento dos dados do `agro_data.csv`.
+          - Análise exploratória da variável `Producao (toneladas)`, incluindo:
+              - Medidas de tendência central (média, mediana, moda).
+              - Medidas de dispersão (variância, desvio padrão, amplitude).
+              - Medidas separatrizes (quartis e decis).
+              - Gráficos: histograma e boxplot.
+          - Análise gráfica da variável `Classificacao de Produtividade`, com um gráfico de barras.
+
+- **docs**: 
+    - **histograma_producao.png**: Histograma da produção de soja.
+    - **boxplot_producao.png**: Boxplot da produção de soja.
+    - **grafico_classificacao.png**: Gráfico de barras da classificação de produtividade.
 
 ## Pré-requisitos
 
@@ -61,18 +66,14 @@ Este projeto realiza uma análise estatística de dados do agronegócio brasilei
     install.packages("rlang")
     ```
 
-- **Ambiente**: VSCode com a extensão VSCode-R (opcional) ou outro ambiente R (ex: RStudio).
-
-- **Arquivos**: Certifique-se de que `agro_data.csv` e `analise_agro.R` estão na mesma pasta.
-
 ## Como Executar
 
-1. Coloque os arquivos `agro_data.csv` e `analise_agro.R` na mesma pasta (ex: `C:\Users\User\Desktop\FIAP atividade 3`).
+1. Clone ou baixe este repositório para sua máquina local.
 
-2. Abra o VSCode (ou outro ambiente R) e configure o diretório de trabalho:
+2. Abra o VSCode (ou outro ambiente R) e navegue até a pasta `src` do projeto:
 
    ```R
-   setwd("C:/Users/User/Desktop/FIAP atividade 3")
+   setwd("caminho/para/projeto/fiap_atividade_fase2_cap7/src")
    ```
 
 3. Execute o script:
@@ -84,7 +85,12 @@ Este projeto realiza uma análise estatística de dados do agronegócio brasilei
 4. Verifique os resultados:
 
    - No console: Medidas estatísticas (média, mediana, etc.).
-   - Na pasta: Gráficos salvos como `histograma_producao.png`, `boxplot_producao.png` e `grafico_classificacao.png`.
+   - Na pasta `docs`: Os gráficos serão salvos automaticamente como:
+     - `histograma_producao.png`
+     - `boxplot_producao.png`
+     - `grafico_classificacao.png`
+   
+Obs.: Não é necessário mover nenhum arquivo, pois o script já está configurado para acessar o arquivo CSV na pasta `data` e salvar os gráficos na pasta `docs` automaticamente.
 
 ## Interpretação dos Resultados
 
