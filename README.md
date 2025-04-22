@@ -6,6 +6,7 @@
 
 <br>
 
+# Análise Estatística de Dados do Agronegócio
 
 ## 👨‍🎓 Integrantes:
 - <a href="https://www.linkedin.com/in/yan-cotta/">Yan Cotta</a>
@@ -14,7 +15,7 @@
 ### Tutor(a)
 - Lucas Gomes Moreira 
 ### Coordenador(a)
-- André Godoi Chiovato# Análise Estatística de Dados do Agronegócio
+- André Godoi Chiovato
 
 ## Informações do Aluno
 
